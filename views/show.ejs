@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            min-height: 100vh;
+            width: 100%;
+            margin: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+        table, tr, th, td {
+            border: 1px solid #0f4;
+            padding: 10px;
+        }
+        table {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="table" id="table">
+           <table>
+               <tr><th>Words</th><th>Count</th></tr>
+               <% for (let i=0; i< words.length; i++) { %>
+                <tr><th><%=words[i].name %></th><th><%=words[i].total %></th></tr>
+               <% } %>
+           </table>
+        </div>
+    </div>
+</body>
+</html>
